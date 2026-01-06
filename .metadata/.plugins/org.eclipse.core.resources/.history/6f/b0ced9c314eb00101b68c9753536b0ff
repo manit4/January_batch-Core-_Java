@@ -1,0 +1,196 @@
+public class Nicolas {
+	
+	int i = 4;
+	int j = 5;
+	int k;
+	
+	
+	public static void main(String a[]) {
+		
+		Nicolas aeron = new Nicolas();
+		
+		aeron.add();
+		
+		System.out.println(aeron.k);
+	}
+	
+	void add() {
+		
+		k = i + j;
+	}
+}
+
+
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		aeron.add();
+//	}
+//	
+//	void add() {
+//		
+//		int i = 10;
+//		
+//		System.out.println(this.i);//this means here is current reference...
+//	}
+//}
+
+
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		aeron.add();
+//	}
+//	
+//	void add() {
+//		
+//		int i = 10;
+//		
+//		System.out.println(i);//local variable is given priority as the output is 10 but not 4;
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		aeron.add();
+//	}
+//	
+//	void add() {
+//		
+//		k = i + j;
+//		
+//		System.out.println(k);
+//	}
+//}
+
+
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicola1 = new Nicolas();
+//		Nicolas nicola2 = new Nicolas();
+//		
+//		System.out.println(nicola1.j);
+//		
+//		nicola1.j = 45;
+//		System.out.println(nicola1.j);
+//		
+//		System.out.println(nicola2.j);	
+//	}
+//}
+
+
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicola = new Nicolas();
+//		
+//		nicola.print();
+//	}
+//	
+//	void print() {
+//		
+//		System.out.println(i);
+//	}
+//}
+
+
+
+//public class Nicolas {
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicola = new Nicolas();
+//		
+//		nicola.print();
+//	}
+//	
+//	void print() {
+//		
+//		System.out.println("Hello print()...");
+//	}
+//}
+
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nic = new Nicolas();
+//		
+//		nic.k = nic.i + nic.j;
+//		
+//		System.out.println(nic.k);
+//	}
+//}
+
+
+//
+//public class Nicolas {
+//	
+//	
+//	
+//	public static void main(String a[]) {
+//		
+//		int i = 4; 
+//		int j = 5;
+//		int k = 0;
+//		
+//		k = i + j;
+//		
+//		System.out.println(k);
+//		
+//		
+//	}
+//}
+
+
+//public class Nicolas {
+//	
+//	int i = 4; 
+//	int j = 5;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nic = new Nicolas();
+//		
+//		System.out.println(nic.i);
+//		System.out.println(nic.j);
+//	}
+//}

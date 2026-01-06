@@ -1,0 +1,11 @@
+
+public class Nicolas {
+	
+	public static void main(String a[]) {
+	
+		short i = (byte) 12332346;
+		
+		System.out.println(i);
+		
+	}
+}

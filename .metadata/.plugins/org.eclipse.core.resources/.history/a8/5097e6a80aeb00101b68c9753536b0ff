@@ -1,0 +1,9 @@
+
+public class Nicolas {
+	
+	public static void main(String a[]) {
+	
+		double f = (float)42434343.7854;
+		System.out.println(f);
+	}
+}

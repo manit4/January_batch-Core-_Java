@@ -1,0 +1,10 @@
+
+public class Nicolas {
+	
+	public static void main(String a[]) {
+	
+		double f = 42434343.78;
+
+		System.out.println(f);
+	}
+}

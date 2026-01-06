@@ -1,0 +1,14 @@
+
+public class Nicolas {
+	
+	int i = 4; 
+	int j = 5;
+	
+	public static void main(String a[]) {
+		
+		Nicolas nic = new Nicolas();
+		
+		System.out.println(nic.i);
+		System.out.println(nic.j);
+	}
+}

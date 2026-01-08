@@ -1,0 +1,874 @@
+
+class LivingBeing {
+
+	int i = 4;
+	
+	void print() {
+		
+		//int i = 10;
+		
+		System.out.println(i);
+	}
+}
+
+public class Nicolas {
+
+	public static void main(String args[]) {
+
+			
+	}
+}
+
+
+//class LivingBeing {
+//
+//	int i = 4;
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	int j = 5;
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//			LivingBeing being = new LivingBeing();
+//			System.out.println(being.i);
+//			//System.out.println(being.j);//not legal...
+//			
+//			Bird bird = new Bird();
+//			System.out.println(bird.j);
+//			System.out.println(bird.i);
+//	}
+//}
+
+
+
+//class LivingBeing {
+//
+//	void eat() {
+//
+//		System.out.println("eat() of LivingBeing...");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	void fly() {
+//
+//		System.out.println("Fly() of Bird...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		LivingBeing being1 = new LivingBeing();
+//		LivingBeing being2 = new LivingBeing();
+//		
+//		Bird bird1 = new Bird();
+//		Bird bird2 = new Bird();
+//		
+//		LivingBeing[] beings = new LivingBeing[2];
+//		beings[0] = being1;   beings[1] = bird1;
+//		
+//		for(int i = 0; i < beings.length; i++) {
+//			
+//			beings[i].eat();
+//			
+//			if( beings[i] instanceof Bird) {
+//				
+//				Bird birdCasted = (Bird) beings[i];
+//				
+//				birdCasted.fly();
+//			}
+//		}			
+//	}
+//}
+
+
+
+//class LivingBeing {
+//
+//	void eat() {
+//
+//		System.out.println("eat() of LivingBeing...");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	void fly() {
+//
+//		System.out.println("Fly() of Bird...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		//Bird sparrow = new Bird();   sparrow.fly();    sparrow.eat();
+//		LivingBeing being = new Bird();    
+//		being.eat(); 
+//		being.fly();
+//		
+//		Bird castedObject = (Bird)being;//downcasting...
+//		castedObject.fly();
+//		
+//	}
+//}
+
+
+//class Mathe {
+//	
+//	void add(int i, int j) {
+//		
+//		System.out.println(i+j);
+//	}
+//	
+//	void add(int i, int j, int k) {
+//		
+//		System.out.println(i+j+k);
+//	}
+//	void add(int i, int j, int k, int l) {
+//		
+//		System.out.println(i+j+k+l);
+//	}
+//	void add(double d1, double d2) {
+//		
+//		System.out.println(d1+d2);
+//	}
+//	void add(double d1, int i) {
+//		
+//		System.out.println(d1+i);
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		Mathe mathe = new Mathe();
+//		mathe.add(12, 23, 21);
+//		mathe.add(34, 1);
+//		mathe.add(23.23, 234.1);
+//		mathe.add(3423.12, 89787);
+//	}
+//}
+
+////overriding is keeping the same method with same signature in both parent and child class but diff. implementations...
+//class LivingBeing {
+//
+//	void eat() {
+//
+//		System.out.println("eat() of LivingBeing...");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	void fly() {
+//
+//		System.out.println("Fly() of Bird...");
+//	}
+//	
+//	void eat() {
+//
+//		System.out.println("eat() of Bird...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		Bird sparrow = new Bird();//child class object can be held by the reference variable of parent class...
+//		sparrow.eat();
+//	}
+//}
+
+
+//
+//class LivingBeing {
+//
+//	void eat() {
+//
+//		System.out.println("eat() of LivingBeing...");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	void fly() {
+//
+//		System.out.println("Fly() of Bird...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		LivingBeing sparrow = new Bird();//child class object can be held by the reference variable of parent class...
+////		sparrow.fly();   sparrow.eat();
+//		
+//		Bird being = new LivingBeing();//parent class objcet can not be held by the reference variable of its child class...
+//	}
+//}
+
+
+
+//class LivingBeing {
+//
+//	void eat() {
+//
+//		System.out.println("eat() of LivingBeing...");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	void fly() {
+//
+//		System.out.println("Fly() of Bird...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		Bird sparrow = new Bird();
+//		sparrow.fly();   sparrow.eat();
+//		
+//		LivingBeing being = new LivingBeing();
+//		being.eat();    being.fly();
+//	}
+//}
+
+
+//class LivingBeing {
+//
+//	void eat() {
+//
+//		System.out.println("eat() of LivingBeing...");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	void fly() {
+//
+//		System.out.println("Fly() of Bird...");
+//	}
+//}
+//
+//class Human extends LivingBeing {
+//
+//	void study() {
+//
+//		System.out.println("Study() of Human...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		Human manit = new Human();
+//		manit.study();    manit.eat();
+//		Bird sparrow = new Bird();
+//		sparrow.fly();   sparrow.eat();
+//	}
+//}
+
+//class Bird {
+//	
+//	void eat() {
+//		
+//		System.out.println("eat() of Bird...");
+//	}
+//	
+//	void fly() {
+//		
+//		System.out.println("Fly() of Bird...");
+//	}
+//}
+//
+//class Human {
+//	
+//	void eat() {
+//		
+//		System.out.println("eat() of Human...");
+//	}
+//	
+//	void study() {
+//		
+//		System.out.println("Study() of Human...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		Human manit = new Human();    manit.eat();   manit.study();
+//		Bird sparrow = new Bird();    sparrow.eat();  sparrow.fly();
+//	}
+//}
+
+//class Human {
+//	
+//	int iq = 1;
+//	int mascularStrength = 10;
+//	
+//	public void goingToGym() {
+//		
+//		mascularStrength++;
+//	}
+//	
+//	public void study() {
+//		
+//		iq++;
+//	}
+//	
+//	static void greet() {
+//		
+//		System.out.println("Hello...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		Human manit = new Human();
+//		Human amit = new Human();
+//		System.out.println(manit.iq);
+//		System.out.println(manit.mascularStrength);
+//		
+//		System.out.println(amit.iq);
+//		System.out.println(amit.mascularStrength);
+//		
+//		Human.greet();	
+//	}
+//}
+
+//class Human {
+//	
+//	int iq = 1;
+//	int mascularStrength = 10;
+//	
+//	public void goingToGym() {
+//		
+//		mascularStrength++;
+//	}
+//	
+//	public void study() {
+//		
+//		iq++;
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		Human manit = new Human();
+//		Human amit = new Human();
+//		System.out.println(manit.iq);
+//		System.out.println(manit.mascularStrength);
+//		
+//		System.out.println(amit.iq);
+//		System.out.println(amit.mascularStrength);
+//		
+//		manit.study();
+//		amit.goingToGym();
+//		
+//		System.out.println("After method calls...");
+//		
+//		System.out.println(manit.iq);
+//		System.out.println(manit.mascularStrength);
+//		
+//		System.out.println(amit.iq);
+//		System.out.println(amit.mascularStrength);
+//	}
+//}
+
+//class A {
+//
+//	static int i = 4;
+//	int j = 5;
+//	
+//	
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		System.out.println(A.i);
+//		
+//		A a = new A();
+//		
+//		System.out.println(a.j);
+//	}
+//}
+
+//class A {
+//
+//	static void print() {
+//
+//		System.out.println("Hello From class A...");
+//	}
+//	
+//	static void print2() {
+//		
+//		print();
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		A.print2();	
+//	}
+//}
+
+//class A {
+//
+//	static void print() {
+//
+//		System.out.println("Hello From class A...");
+//	}
+//}
+//
+//class B {
+//
+//	static void print() {
+//
+//		System.out.println("Hello From class B...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		print();
+//		A.print();
+//		B.print();
+//		
+//	}
+//	
+//	static void print() {
+//
+//		System.out.println("Hello From class Nicolas...");
+//	}
+//}
+
+//class A {
+//	
+//	void print() {
+//		
+//		System.out.println("Hello From class A...");
+//	}
+//}
+//
+//public class Nicolas {
+//	
+//	public static void main(String args[]) {
+//		
+//		A a = new A(); 
+//		
+//		a.print();
+//	}	
+//}
+
+//07-01-2026//
+
+//non static methods can access non static as well as static variables and can access
+//static as well as non static methods from it...
+//static methods can have static variables or call static methods from the static method... only...
+
+//public class Nicolas {
+//	
+//	static int i = 4;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicolas = new Nicolas();
+//	}
+//	
+//	void add() {
+//
+//		System.out.println(i);
+//	}	
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicolas = new Nicolas();
+//		
+//		add();
+//	}
+//	
+//	static void add() {
+//
+//		System.out.println(i);//non static variables can not be accessed inside static methods();;; 
+//	}	
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	static int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicolas1 = new Nicolas();
+//		Nicolas nicolas2 = new Nicolas();
+//		
+//		nicolas1.add();
+//		
+//		System.out.println(nicolas1.i);
+//		System.out.println(nicolas1.j);
+//		System.out.println(k);
+//		
+//		nicolas2.add();
+//		
+//		System.out.println(nicolas2.i);
+//		System.out.println(nicolas2.j);
+//		System.out.println(k);
+//	}
+//	
+//	void add() {
+//		
+//		k = i + j + k;
+//	}	
+//}
+
+//
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicolas1 = new Nicolas();
+//		Nicolas nicolas2 = new Nicolas();
+//		
+//		nicolas1.add();       nicolas2.add();
+//		
+//		System.out.println(nicolas1.i);
+//		System.out.println(nicolas1.j);
+//		System.out.println(nicolas1.k);
+//		
+//		System.out.println(nicolas2.i);
+//		System.out.println(nicolas2.j);
+//		System.out.println(nicolas2.k);
+//
+//	}
+//	
+//	void add() {
+//		
+//		k = i + j + k;
+//	}	
+//}
+
+//public class Nicolas {
+//	
+//	static int i = 4;//you do not need object to call variabe and method if they are static...
+//	
+//	public static void main(String a[]) {
+//		
+//		System.out.println(i);
+//		
+//		print();
+//	}
+//	
+//	static void print() {
+//		
+//		System.out.println("Hello...");
+//	}	
+//}
+
+//public class Nicolas {
+//	
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		int i = 4;
+//		int j = 5;
+//		
+//		aeron.add(i, j);
+//		
+//		System.out.println(aeron.k);
+//	}
+//	
+//	void add(int i, int j) {
+//		
+//		k = i + j;
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		int i = 4;
+//		int j = 5;
+//		
+//		int returnedValue = aeron.add(i, j);
+//		
+//		System.out.println(returnedValue);
+//	}
+//	
+//	int add(int i, int j) {
+//		
+//		int k = i + j;
+//		
+//		return k;
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		int i = 4;
+//		int j = 5;
+//		
+//		aeron.add(i, j);
+//	}
+//	
+//	void add(int i, int j) {
+//		
+//		int k = i + j;
+//		System.out.println(k);
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		int returnedValue = aeron.add();
+//		
+//		System.out.println(returnedValue);
+//	}
+//	
+//	int add() {
+//		
+//		int k = i + j;
+//		
+//		return k;
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		aeron.add();
+//		
+//		System.out.println(aeron.k);
+//	}
+//	
+//	void add() {
+//		
+//		k = i + j;
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		aeron.add();
+//	}
+//	
+//	void add() {
+//		
+//		int i = 10;
+//		
+//		System.out.println(this.i);//this means here is current reference...
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		aeron.add();
+//	}
+//	
+//	void add() {
+//		
+//		int i = 10;
+//		
+//		System.out.println(i);//local variable is given priority as the output is 10 but not 4;
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas aeron = new Nicolas();
+//		
+//		aeron.add();
+//	}
+//	
+//	void add() {
+//		
+//		k = i + j;
+//		
+//		System.out.println(k);
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicola1 = new Nicolas();
+//		Nicolas nicola2 = new Nicolas();
+//		
+//		System.out.println(nicola1.j);
+//		
+//		nicola1.j = 45;
+//		System.out.println(nicola1.j);
+//		
+//		System.out.println(nicola2.j);	
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicola = new Nicolas();
+//		
+//		nicola.print();
+//	}
+//	
+//	void print() {
+//		
+//		System.out.println(i);
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nicola = new Nicolas();
+//		
+//		nicola.print();
+//	}
+//	
+//	void print() {
+//		
+//		System.out.println("Hello print()...");
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nic = new Nicolas();
+//		
+//		nic.k = nic.i + nic.j;
+//		
+//		System.out.println(nic.k);
+//	}
+//}
+
+//
+//public class Nicolas {
+//	
+//	
+//	
+//	public static void main(String a[]) {
+//		
+//		int i = 4; 
+//		int j = 5;
+//		int k = 0;
+//		
+//		k = i + j;
+//		
+//		System.out.println(k);
+//		
+//		
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	int i = 4; 
+//	int j = 5;
+//	
+//	public static void main(String a[]) {
+//		
+//		Nicolas nic = new Nicolas();
+//		
+//		System.out.println(nic.i);
+//		System.out.println(nic.j);
+//	}
+//}

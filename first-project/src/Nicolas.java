@@ -1,46 +1,491 @@
 
-class LivingBeing {
-
-	void eat() {
-
-		System.out.println("eat() of LivingBeing...");
-	}
-}
-
-class Bird extends LivingBeing {
-
-	void fly() {
-
-		System.out.println("Fly() of Bird...");
-	}
+interface A {
+	
+	//int i;// this is illegal since variables in an interface needs to be assigned value since
+			//variables are implicitly public static and final...
+	int j = 6;
 }
 
 public class Nicolas {
 
 	public static void main(String args[]) {
-
-		LivingBeing being1 = new LivingBeing();
-		LivingBeing being2 = new LivingBeing();
 		
-		Bird bird1 = new Bird();
-		Bird bird2 = new Bird();
-		
-		LivingBeing[] beings = new LivingBeing[2];
-		beings[0] = being1;   beings[1] = bird1;
-		
-		for(int i = 0; i < beings.length; i++) {
-			
-			beings[i].eat();
-			
-			if( beings[i] instanceof Bird) {
-				
-				Bird birdCasted = (Bird) beings[i];
-				
-				birdCasted.fly();
-			}
-		}			
+		System.out.println(A.j);
 	}
 }
+
+
+//interface A {
+//	
+//	abstract void add();//it is optional to write abstract with methods in an interface since they are both abstract and public by nature...
+//	void sub();
+//	default void mul() {//you can have implemented method/s in an interface but with either default or static keyword
+//						//and that too comes from Java 1.8 onwards not before than that...
+//		System.out.println("mul");
+//	}
+//	static void div() {
+//		
+//		System.out.println();
+//	}
+//}
+//
+//class ImplB implements A {
+//
+//	@Override
+//	public void add() {
+//		System.out.println("add");
+//		
+//	}
+//
+//	@Override
+//	public void sub() {
+//		System.out.println("sub");
+//		
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A.div();//static methods of an interface can be called by an interface name...
+//	}
+//}
+
+
+
+
+//interface A {
+//	
+//	abstract void add();//it is optional to write abstract with methods in an interface...
+//	void sub();
+//}
+//
+//abstract class ImplB implements A {//class must implement an interface but not extend...
+//
+//	public void add() {
+//		System.out.println("add");
+//	}	
+//}
+//
+//class ImplC extends ImplB {
+//
+//	public void sub() {
+//		System.out.println("sub");
+//	}	
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		ImplC b = new ImplC();
+//		b.add();    b.sub();
+//		A a = new ImplC();//you can not create object of interface and abstract class
+//							//but you can have reference variable of an interface and abstract class...
+//		ImplB implB = new ImplC();
+//	}
+//}
+
+//interface A {
+//	
+//	abstract void add();//it is optional to write abstract with methods in an interface...
+//	void sub();
+//}
+//
+//class ImplB implements A {//class must implement an interface but not extend...
+//
+//	public void add() {
+//		System.out.println("add");
+//	}
+//	
+//	public void sub() {
+//		System.out.println("sub");
+//	}	
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		ImplB b = new ImplB();
+//		b.add();    b.sub();
+//	}
+//}
+
+
+
+//interface A {
+//	
+//	abstract void add();//it is optional to write abstract with methods in an interface...
+//	void sub();
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A();//it is illegal to create object of an interface.... 
+//	}
+//}
+
+
+//
+//abstract class A {
+//	
+//	void add() {
+//		
+//		System.out.println("Add()");
+//	}
+//	abstract void sub();
+//	
+//	abstract void mul(int i);
+//}
+//
+//abstract class ImplA extends A {
+//	
+//	void mul(int i) {
+//		
+//		System.out.println("mul from child");
+//	}
+//}
+//
+//class ImplB extends ImplA {
+//
+//	void sub() {
+//		System.out.println("inside sub()");		
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		ImplB b = new ImplB();
+//		b.add();    b.sub();    b.mul(10);
+//	}
+//}
+
+
+//abstract class A {
+//	
+//	void add() {
+//		
+//		System.out.println("Add()");
+//	}
+//	abstract void sub();
+//	
+//	abstract void mul(int i);
+//}
+//
+//abstract class ImplA extends A {
+//	
+//	void mul(int i) {
+//		
+//		System.out.println("mul from child");
+//	}
+//}
+//
+//class ImplB extends ImplA {
+//
+//	void sub() {
+//		System.out.println("inside sub()");
+//		
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		ImplB b = new ImplB();
+//		b.add();    b.sub();    b.mul(10);
+//	}
+//}
+
+
+
+//
+//abstract class A {
+//	
+//	void add() {
+//		
+//		System.out.println("Add()");
+//	}
+//	
+//	abstract void mul(int i);
+//}
+//
+//class ImplA extends A {
+//	
+//	void mul(int i) {
+//		
+//		System.out.println("mul from child");
+//	}
+//	
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		ImplA a = new ImplA();
+//		a.add();       a.mul(10);
+//	}
+//}
+
+
+//abstract class A {//it is legal to have all the methods implemeneted in an abstract class...
+//	
+//	void add() {
+//		
+//		System.out.println("Add()");
+//	}
+//	void sub() {
+//		System.out.println("sub()");
+//	}
+//	
+//	void mul(int i) {
+//		
+//		System.out.println(i);
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A();//you can not create object of abstract class...
+//	}
+//}
+
+
+//
+//abstract class A {//it is legal to have abstract method in a class which is itself abstract...
+//	
+//	void add() {
+//		
+//		System.out.println("Add()");
+//	}
+//	void sub() {
+//		System.out.println("sub()");
+//	}
+//	
+//	abstract void mul(int i);//abstract method or unimplemeneted method
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A();//you can not create object of abstract class...
+//		
+//	}
+//}
+
+
+//class LivingBeing {
+//	
+//	final void print() {
+//		
+//		System.out.println("Hello");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//	
+//	void print() {//this is illagel since I am trying to override final method...
+//		
+//		System.out.println("Hello from Bird");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//	}
+//}
+
+
+
+//final class LivingBeing {
+//	
+//	
+//	final int i = 4;
+//}
+//
+//class Bird extends LivingBeing {//this is illegal since parent class is final and you can not subclass parent class... 
+//	
+//	
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		LivingBeing being = new LivingBeing();
+//		being.i = 10;//you cannot reassign value to final variable...
+//	}
+//}
+
+
+//class LivingBeing {
+//	
+//	//final int i;//this is illegal keeping final variable unassigned...
+//	final int i = 4;
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		LivingBeing being = new LivingBeing();
+//		being.i = 10;//you cannot reassign value to final variable...
+//	}
+//}
+
+
+//
+//class LivingBeing {
+//	
+//	int i = 4;
+//	
+//}
+//
+//class Bird extends LivingBeing {
+//	
+//	int j = 5;
+//
+//	void printBirdClass() {
+//		
+//		System.out.println(j);
+//	}
+//}
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		LivingBeing bird = new Bird();
+//		
+//		if( bird instanceof Bird) {
+//			
+//			Bird castedBird = (Bird) bird;
+//			
+//			castedBird.printBirdClass();
+//			System.out.println(castedBird.j);
+//		}
+//		
+//		System.out.println(bird.i);
+//	}
+//}
+
+
+
+//class LivingBeing {
+//
+//	int j = 4;
+//	
+//	void print() {
+//		
+//		System.out.println(j);
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//	
+//	int j = 5;
+//
+//	void printBirdClass() {
+//		
+//		int j = 10;
+//		
+//		System.out.println(this.j);
+//		System.out.println(j);
+//		System.out.println(super.j);
+//	}
+//}
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		Bird bird = new Bird();
+//		bird.printBirdClass();
+//	}
+//}
+
+
+//class LivingBeing {
+//
+//	int i = 4;
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	int j = 5;
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//			LivingBeing being = new LivingBeing();
+//			System.out.println(being.i);
+//			//System.out.println(being.j);//not legal...
+//			
+//			Bird bird = new Bird();
+//			System.out.println(bird.j);
+//			System.out.println(bird.i);
+//	}
+//}
+
+
+
+//class LivingBeing {
+//
+//	void eat() {
+//
+//		System.out.println("eat() of LivingBeing...");
+//	}
+//}
+//
+//class Bird extends LivingBeing {
+//
+//	void fly() {
+//
+//		System.out.println("Fly() of Bird...");
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		LivingBeing being1 = new LivingBeing();
+//		LivingBeing being2 = new LivingBeing();
+//		
+//		Bird bird1 = new Bird();
+//		Bird bird2 = new Bird();
+//		
+//		LivingBeing[] beings = new LivingBeing[2];
+//		beings[0] = being1;   beings[1] = bird1;
+//		
+//		for(int i = 0; i < beings.length; i++) {
+//			
+//			beings[i].eat();
+//			
+//			if( beings[i] instanceof Bird) {
+//				
+//				Bird birdCasted = (Bird) beings[i];
+//				
+//				birdCasted.fly();
+//			}
+//		}			
+//	}
+//}
 
 
 

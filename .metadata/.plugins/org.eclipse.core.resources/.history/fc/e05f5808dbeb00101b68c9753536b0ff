@@ -1,4 +1,3 @@
-
 class LivingBeing {
 
 	void eat() {
@@ -19,61 +18,9 @@ public class Nicolas {
 
 	public static void main(String args[]) {
 
-		LivingBeing being1 = new LivingBeing();
-		LivingBeing being2 = new LivingBeing();
-		
-		Bird bird1 = new Bird();
-		Bird bird2 = new Bird();
-		
-		LivingBeing[] beings = new LivingBeing[2];
-		beings[0] = being1;   beings[1] = bird1;
-		
-		for(int i = 0; i < beings.length; i++) {
-			
-			beings[i].eat();
-			
-			if( beings[i] instanceof Bird) {
-				
-				Bird birdCasted = (Bird) beings[i];
-				
-				birdCasted.fly();
-			}
-		}			
+		Bird sparrow = new Bird();   sparrow.fly();    sparrow.eat();
 	}
 }
-
-
-
-//class LivingBeing {
-//
-//	void eat() {
-//
-//		System.out.println("eat() of LivingBeing...");
-//	}
-//}
-//
-//class Bird extends LivingBeing {
-//
-//	void fly() {
-//
-//		System.out.println("Fly() of Bird...");
-//	}
-//}
-//
-//public class Nicolas {
-//
-//	public static void main(String args[]) {
-//
-//		//Bird sparrow = new Bird();   sparrow.fly();    sparrow.eat();
-//		LivingBeing being = new Bird();    
-//		being.eat(); 
-//		being.fly();
-//		
-//		Bird castedObject = (Bird)being;//downcasting...
-//		castedObject.fly();
-//		
-//	}
-//}
 
 
 //class Mathe {

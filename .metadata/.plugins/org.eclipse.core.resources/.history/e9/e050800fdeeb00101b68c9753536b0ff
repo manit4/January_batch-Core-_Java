@@ -28,17 +28,12 @@ public class Nicolas {
 		LivingBeing[] beings = new LivingBeing[2];
 		beings[0] = being1;   beings[1] = bird1;
 		
-		for(int i = 0; i < beings.length; i++) {
-			
-			beings[i].eat();
-			
-			if( beings[i] instanceof Bird) {
-				
-				Bird birdCasted = (Bird) beings[i];
-				
-				birdCasted.fly();
-			}
-		}			
+		
+		Bird[] birds = new Bird[2];
+		
+		
+		
+ 		
 	}
 }
 
@@ -66,12 +61,8 @@ public class Nicolas {
 //
 //		//Bird sparrow = new Bird();   sparrow.fly();    sparrow.eat();
 //		LivingBeing being = new Bird();    
-//		being.eat(); 
+//		being.eat();   
 //		being.fly();
-//		
-//		Bird castedObject = (Bird)being;//downcasting...
-//		castedObject.fly();
-//		
 //	}
 //}
 

@@ -13,136 +13,21 @@ class Bird extends LivingBeing {
 
 		System.out.println("Fly() of Bird...");
 	}
+	
+	void eat() {
+
+		System.out.println("eat() of Bird...");
+	}
 }
 
 public class Nicolas {
 
 	public static void main(String args[]) {
 
-		LivingBeing being1 = new LivingBeing();
-		LivingBeing being2 = new LivingBeing();
-		
-		Bird bird1 = new Bird();
-		Bird bird2 = new Bird();
-		
-		LivingBeing[] beings = new LivingBeing[2];
-		beings[0] = being1;   beings[1] = bird1;
-		
-		for(int i = 0; i < beings.length; i++) {
-			
-			beings[i].eat();
-			
-			if( beings[i] instanceof Bird) {
-				
-				Bird birdCasted = (Bird) beings[i];
-				
-				birdCasted.fly();
-			}
-		}			
+		Bird sparrow = new Bird();//child class object can be held by the reference variable of parent class...
+		sparrow.eat();
 	}
 }
-
-
-
-//class LivingBeing {
-//
-//	void eat() {
-//
-//		System.out.println("eat() of LivingBeing...");
-//	}
-//}
-//
-//class Bird extends LivingBeing {
-//
-//	void fly() {
-//
-//		System.out.println("Fly() of Bird...");
-//	}
-//}
-//
-//public class Nicolas {
-//
-//	public static void main(String args[]) {
-//
-//		//Bird sparrow = new Bird();   sparrow.fly();    sparrow.eat();
-//		LivingBeing being = new Bird();    
-//		being.eat(); 
-//		being.fly();
-//		
-//		Bird castedObject = (Bird)being;//downcasting...
-//		castedObject.fly();
-//		
-//	}
-//}
-
-
-//class Mathe {
-//	
-//	void add(int i, int j) {
-//		
-//		System.out.println(i+j);
-//	}
-//	
-//	void add(int i, int j, int k) {
-//		
-//		System.out.println(i+j+k);
-//	}
-//	void add(int i, int j, int k, int l) {
-//		
-//		System.out.println(i+j+k+l);
-//	}
-//	void add(double d1, double d2) {
-//		
-//		System.out.println(d1+d2);
-//	}
-//	void add(double d1, int i) {
-//		
-//		System.out.println(d1+i);
-//	}
-//}
-//
-//public class Nicolas {
-//
-//	public static void main(String args[]) {
-//
-//		Mathe mathe = new Mathe();
-//		mathe.add(12, 23, 21);
-//		mathe.add(34, 1);
-//		mathe.add(23.23, 234.1);
-//		mathe.add(3423.12, 89787);
-//	}
-//}
-
-////overriding is keeping the same method with same signature in both parent and child class but diff. implementations...
-//class LivingBeing {
-//
-//	void eat() {
-//
-//		System.out.println("eat() of LivingBeing...");
-//	}
-//}
-//
-//class Bird extends LivingBeing {
-//
-//	void fly() {
-//
-//		System.out.println("Fly() of Bird...");
-//	}
-//	
-//	void eat() {
-//
-//		System.out.println("eat() of Bird...");
-//	}
-//}
-//
-//public class Nicolas {
-//
-//	public static void main(String args[]) {
-//
-//		Bird sparrow = new Bird();//child class object can be held by the reference variable of parent class...
-//		sparrow.eat();
-//	}
-//}
 
 
 //

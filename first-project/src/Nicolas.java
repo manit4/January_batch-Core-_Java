@@ -1,18 +1,285 @@
 
-interface A {
+class A {
 	
-	//int i;// this is illegal since variables in an interface needs to be assigned value since
-			//variables are implicitly public static and final...
-	int j = 6;
+	int i = 4;
+	int j = 5;
+	int k = 10;
+	
+	public String toString() {
+		return "The value of i is"+i+", and the value of j is "+j;
+	}
+	
 }
 
 public class Nicolas {
 
 	public static void main(String args[]) {
 		
-		System.out.println(A.j);
+		A a1 = new A();
+		System.out.println(a1.toString());//calling toString() in Sysout is optioanl as it is implicitly appended with the reference variable in Sysout...
 	}
 }
+
+
+//class A {
+//	
+//	int i = 4;
+//	int j = 5;
+//	
+//	public boolean equals(Object obj) {
+//		
+//		if(i == ((A)obj).i && j == ((A)obj).j) {
+//			return true;
+//		}
+//		return false;
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a1 = new A();
+//		A a2 = new A();
+//	
+//		a2.j = 30;
+//		
+//		boolean status = a1.equals(a2);
+//		System.out.println(status);
+//	}
+//}
+
+
+
+//class A {
+//	
+//	int i = 4;
+//	
+//	public boolean equals(Object obj) {
+//		
+//		if(i == ((A)obj).i) {
+//			return true;
+//		}
+//		return false;
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a1 = new A();
+//		A a2 = new A();
+//		a1.i = 20;
+//		boolean status = a1.equals(a2);
+//		System.out.println(status);
+//	}
+//}
+
+
+
+//class A {this is the program of pass by value...
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	void add(int a1, int a2) {
+//		
+//		a2 = a1 + j;
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a1 = new A();
+//		A a2 = new A();
+//		
+//		a1.add(a2.i, a2.k);
+//		
+//		System.out.println(a1.k);
+//		System.out.println(a2.k);
+//	}
+//}
+
+//class A {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k;
+//	
+//	void add(A a) {
+//		
+//		a.k = a.i + j;
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a1 = new A();
+//		A a2 = new A();
+//		
+//		a1.add(a2);
+//		
+//		System.out.println(a1.k);
+//		System.out.println(a2.k);
+//	}
+//}
+
+
+
+//class A {
+//	
+//	int i = 4;
+//	int j = 5;
+//	
+//	A() {
+//		
+//	}
+//	A(int i, int j) {
+//		
+//		this.i = i;
+//		this.j = j;
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A(10, 16);
+//		
+//		System.out.println(a.i);
+//		
+//		A a2 = new A();
+//		System.out.println(a2.i);
+//	}
+//}
+
+
+
+//
+//class A {
+//	
+//	int i = 4;
+//	int j = 5;
+//	
+//	A() {
+//		
+//	}
+//	A(int i, int j) {
+//		
+//		this.i = i;
+//		this.j = j;
+//	}
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A(10, 16);
+//		
+//		System.out.println(a.i);
+//		
+//		A a2 = new A();
+//		System.out.println(a2.i);
+//	}
+//}
+
+
+
+//class A {
+//	
+//	int i = 4;
+//	
+//	A(int i) {
+//		
+//		this.i = i;
+//	}
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A(10);
+//		
+//		System.out.println(a.i);
+//		
+//		A a2 = new A();//You can not create object with no-arg constructor since  you already have parametertised constructor
+//						//and no arg constructor is given implicitly only and only ig there is no other constructor present...
+//		
+//	}
+//}
+
+//class A {
+//	
+//	int i = 4;
+//	
+//	A(int i) {//parameterised constructor...
+//		
+//		this.i = i;
+//	}
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A(10);
+//		
+//		System.out.println(a.i);
+//		
+//	}
+//}
+
+
+
+//
+//class A {
+//	
+//	int i = 4;
+//	
+//	A() {//This constructor is given by default by compiler if there is no other constructor preent...
+//		
+//		System.out.println("Hello in a no-arg constrictor...");
+//	}
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a = new A();
+//		
+//	}
+//}
+
+
+
+//
+//interface A {
+//	
+//	//int i;// this is illegal since variables in an interface needs to be assigned value since
+//			//variables are implicitly public static and final...
+//	int j = 6;
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		System.out.println(A.j);
+//	}
+//}
 
 
 //interface A {

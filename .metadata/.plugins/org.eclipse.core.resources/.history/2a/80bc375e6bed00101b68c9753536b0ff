@@ -1,0 +1,7 @@
+package com.ftcampus.second;
+
+public class Second3 {
+	
+	int i = 4;
+
+}

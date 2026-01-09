@@ -1,0 +1,62 @@
+package com.ftcampus.first;//package statement must be the first statement of the file...
+
+
+
+public class First {
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}
+
+
+
+
+//class Human {
+//	
+//	private int iq = 4;
+//	
+//	public void study() {
+//		iq++;
+//	}
+//	
+//	public int getIq() {
+//		return iq;
+//	}
+//}
+//
+//public class First {
+//	
+//	public static void main(String[] args) {
+//		
+//		Human manit =  new Human();
+//		manit.study();
+//		System.out.println(manit.getIq());
+//	}
+//}
+
+
+
+
+
+
+
+//class A {
+//	
+//	private int i = 4;
+//}
+//
+//public class First {
+//	
+//	public static void main(String[] args) {
+//		
+//		A a =  new A();
+//	
+//		System.out.println(a.i);
+//	}
+//}
+
+//private> you can not use private with class, only variables, methods and constructors...
+//private visibility is only in its own class...

@@ -1,25 +1,606 @@
+import java.io.File;
+import java.io.FileReader;
 
-class A {
-	
-	int i = 4;
-	int j = 5;
-	int k = 10;
-	
-	public String toString() {
-		return "The value of i is"+i+", and the value of j is "+j;
-	}
-	
-}
+public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
 
-public class Nicolas {
-
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception {
 		
-		A a1 = new A();
-		System.out.println(a1.toString());//calling toString() in Sysout is optioanl as it is implicitly appended with the reference variable in Sysout...
+		
+			Nicolas nicolas = new Nicolas();
+			nicolas.a();
+		
+	}
+	
+	void a() throws Exception{
+			b();
+		
+	}
+	
+	void b() throws Exception {
+		
+			File file = new File("a.txt");
+			FileReader reader = new FileReader(file);
 	}
 }
 
+
+
+//public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+//
+//	public static void main(String args[]) {
+//		
+//		try {
+//			Nicolas nicolas = new Nicolas();
+//			nicolas.a();
+//		}
+//		catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
+//	
+//	void a() throws Exception{
+//			b();
+//		
+//	}
+//	
+//	void b() throws Exception {
+//		
+//			File file = new File("a.txt");
+//			FileReader reader = new FileReader(file);
+//	}
+//}
+
+
+
+//public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+//
+//	public static void main(String args[]) {
+//		
+//		Nicolas nicolas = new Nicolas();
+//		nicolas.a();
+//	}
+//	
+//	void a() {
+//		try {
+//			
+//			b();
+//		}
+//		catch (Exception e) {
+//			
+//		}
+//	}
+//	
+//	void b() throws Exception {
+//		
+//			File file = new File("a.txt");
+//			FileReader reader = new FileReader(file);
+//	}
+//}
+
+
+//public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+//
+//	public static void main(String args[]) {
+//		
+//		Nicolas nicolas = new Nicolas();
+//		nicolas.a();
+//	}
+//	
+//	void a() {
+//		b();
+//	}
+//	
+//	void b() {
+//		try {
+//			File file = new File("a.txt");
+//			FileReader reader = new FileReader(file);
+//		}
+//		catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
+//}
+
+
+
+//public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+//
+//	public static void main(String args[]) throws Exception {
+//		
+//		
+//			File file = new File("a.txt");
+//			FileReader reader = new FileReader(file);
+//	}
+//}
+
+
+
+
+//public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+//
+//	public static void main(String args[]) {
+//		
+//		try {
+//			File file = new File("a.txt");
+//			FileReader reader = new FileReader(file);
+//		}
+//		catch (Exception e) {
+//			
+//		}
+//	}
+//}
+
+
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		try {	
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);	
+//		}
+//		System.out.println("I am in between try and finally");//This is illegal since you can not have anything in between try and catch or try and fianlly. 
+//		//finally and catch must come immeduialtely right after try...
+//		finally {//Finally will always be executed whether exception is raised or not...
+//			System.out.println("here you would write resources cleanup code...");
+//		}
+//	}
+//}
+
+
+
+
+//public class Nicolas {//This is legal since you have try with finally...
+//
+//	public static void main(String args[]) {
+//		
+//		try {	
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);	
+//		}
+//		
+//		finally {//Finally will always be executed whether exception is raised or not...
+//			System.out.println("here you would write resources cleanup code...");
+//		}
+//	}
+//}
+
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		try {	
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);	
+//		}//this is illegal since you must either have catch or finally or both...
+//		
+//	}
+//}
+
+
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		try {	
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);	
+//		}
+//		catch (Exception e) {
+//			System.out.println("isndie Exception parent class...");
+//		}
+//		finally {//Finally will always be executed whether exception is raised or not...
+//			System.out.println("here you would write resources cleanup code...");
+//		}
+//	}
+//}
+
+
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//
+//	public static void main(String args[]) {
+//		
+//		Nicolas nicolas = new Nicolas();
+//		
+//		System.out.println(nicolas.i);
+//		
+////		nicolas = null;//NullPointerExceptio is raised when you try to access any method or variable on reference variable pointing to null...
+////		System.out.println(nicolas.i);
+//		
+//		String name = null;
+//		
+//		if(name != null) {
+//			
+//			System.out.println(name.isEmpty());
+//		}
+//	}
+//}
+
+
+
+//public class Nicolas {
+//	
+//	int i = 4;
+//
+//	public static void main(String args[]) {
+//		
+//		Nicolas nicolas = new Nicolas();
+//		
+//		System.out.println(nicolas.i);
+//		
+////		nicolas = null;//NullPointerExceptio is raised when you try to access any method or variable on reference variable pointing to null...
+////		System.out.println(nicolas.i);
+//		
+//		String name = null;
+//		
+//		if(name != null) {
+//			
+//			System.out.println(name.isEmpty());
+//		}
+//	}
+//}
+
+
+
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		try {	
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);
+//			
+//			String name = "Obaro";
+//			System.out.println("Enter the index want to access");
+//			int index = sc.nextInt();
+//
+//			System.out.println("The character is " + name.charAt(index));
+//		}
+//		catch (Exception e) {
+//			System.out.println("isndie Exception parent class...");
+//		}
+//		catch (ArithmeticException e) {
+//			System.out.println("inside Arithmetic");
+//		}
+//		catch (StringIndexOutOfBoundsException e) {
+//			System.out.println("inside StringIndex");
+//		}
+//		catch (NullPointerException e) {
+//			System.out.println("inside nullPointer...");
+//		}
+//		
+//	}
+//}
+
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		try {	
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);
+//			
+//			String name = "Obaro";
+//			System.out.println("Enter the index want to access");
+//			int index = sc.nextInt();
+//
+//			System.out.println("The character is " + name.charAt(index));
+//		}
+//		catch (ArithmeticException e) {
+//			System.out.println("inside Arithmetic");
+//		}
+//		catch (StringIndexOutOfBoundsException e) {
+//			System.out.println("inside StringIndex");
+//		}
+//		catch (NullPointerException e) {
+//			System.out.println("inside nullPointer...");
+//		}
+//		catch (Exception e) {
+//			System.out.println("isndie Exception parent class...");
+//		}
+//	}
+//}
+
+
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		divide();
+//	}
+//
+//	static void divide() {
+//		try {
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			int j = i / divider;
+//			System.out.println("The output is after dividing " + j);
+//			accessIndex();
+//		} catch (Exception e) {
+//			System.out.println("Enter non-zero value!!");
+//			divide();
+//		}
+//	}
+//
+//	static void accessIndex() {
+//
+//		try {
+//			Scanner sc = new Scanner(System.in);
+//			String name = "Obaro";
+//			System.out.println("Enter the index want to access");
+//			int index = sc.nextInt();
+//
+//			System.out.println("The character is " + name.charAt(index));
+//		} catch (Exception e) {
+//			System.out.println("Enter index inside the range!!");
+//			accessIndex();
+//		}
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//
+//		divide();
+//	}
+//
+//	public static void divide() {
+//
+//		try {
+//
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//
+//			int j = i / divider;
+//
+//			System.out.println("The output is " + j);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			System.out.println("inside catch and do not enter 0...");
+//			divide();
+//		}
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		try {
+//			
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);
+//		}
+//		catch (Exception e) {
+//			e.printStackTrace();
+//			System.out.println("inside catch...");
+//			main(null);
+//		}
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		try {
+//			
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter divider!!");
+//			int divider = sc.nextInt();
+//			int i = 4;
+//			
+//			int j = i/divider;
+//			
+//			System.out.println("The output is "+j);
+//		}
+//		catch (Exception e) {
+//			e.printStackTrace();
+//			System.out.println("inside catch...");
+//		}
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		int[] salaries = { 23, 43, 12 };
+//		System.out.println(salaries[3]);//it will throw ArrayIndexOutOfBoundsException eception...
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		int i = 4;
+//		
+//		int j = i/0;//ArithmeticException class Exception is thrown...
+//		
+//		System.out.println(j);
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		String s1 = "Obaro";
+//		System.out.println(s1.charAt(6));//it will generate StringIndexOutOfBoundsExceptionException...
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		String s1 = new String("Aeron");
+//		String s2 = "Obaro";
+//		String s3 = new String("Obaro");
+//		String s4 = "Obaro";
+//		System.out.println(s2 == s3);
+//		System.out.println(s2.equals(s3));
+//		System.out.println(s2 == s4);
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		StringBuilder s1 = new StringBuilder("Aeron");
+//		System.out.println(s1);
+//		
+//		s1.reverse();
+//		
+//		System.out.println(s1);
+//		
+//		String s2 = "Obaro";
+//		s2 = s2.toUpperCase();
+//		System.out.println(s2);	
+//	}
+//}
+
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		String name1 = "Aeron";//here I am creating String object with String literal;;;
+//		String name2 = "Obaro";
+//		String name3 = "Obaro";
+//		
+//		System.out.println(name1 == name2);
+//		System.out.println(name2 == name3);
+//		
+//		
+//		String name4 = new String("Aeron");//here I am creating String object with String literal;;;
+//		String name5 = new String("Obaro");
+//		String name6 = new String("Obaro");
+//		
+//		System.out.println(name4 == name5);
+//		System.out.println(name5 == name6);
+//		
+//	}
+//}
+
+//public class Nicolas {
+//	
+//	public String toString() {
+//		
+//		return "Right, Obaro";
+//	}
+//
+//	public static void main(String args[]) {
+//		
+//		String name1 = new String("Aeron");
+//		String name2 = new String("Obaro");
+//		String name3 = new String("Obaro");
+//		
+//		System.out.println(name1 == name2);
+//		System.out.println(name2 == name3);
+//	}
+//}
+
+//
+//
+//public class Nicolas {
+//	
+//	public String toString() {
+//		
+//		return "Right, Obaro";
+//	}
+//
+//	public static void main(String args[]) {
+//		
+//		String name = new String();
+//		String name2 = new String("Obaro");
+//		System.out.println(name.isEmpty());
+//		System.out.println(name.length());
+//		System.out.println(name2.charAt(2));
+//		System.out.println(name.toString());//toString() is optioanl in Sysout...
+//		
+//		Nicolas nicolas = new Nicolas();
+//		System.out.println(nicolas.toString());
+//	}
+//}
+
+//class A {
+//	
+//	int i = 4;
+//	int j = 5;
+//	int k = 10;
+//	
+//	public String toString() {
+//		return "The value of i is"+i+", and the value of j is "+j;
+//	}
+//	
+//}
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		A a1 = new A();
+//		System.out.println(a1.toString());//calling toString() in Sysout is optioanl as it is implicitly appended with the reference variable in Sysout...
+//	}
+//}
 
 //class A {
 //	
@@ -49,8 +630,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //class A {
 //	
 //	int i = 4;
@@ -75,8 +654,6 @@ public class Nicolas {
 //		System.out.println(status);
 //	}
 //}
-
-
 
 //class A {this is the program of pass by value...
 //	
@@ -130,8 +707,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //class A {
 //	
 //	int i = 4;
@@ -160,8 +735,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //
 //class A {
 //	
@@ -190,8 +763,6 @@ public class Nicolas {
 //		System.out.println(a2.i);
 //	}
 //}
-
-
 
 //class A {
 //	
@@ -240,8 +811,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //
 //class A {
 //	
@@ -263,8 +832,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //
 //interface A {
 //	
@@ -280,7 +847,6 @@ public class Nicolas {
 //		System.out.println(A.j);
 //	}
 //}
-
 
 //interface A {
 //	
@@ -318,9 +884,6 @@ public class Nicolas {
 //		A.div();//static methods of an interface can be called by an interface name...
 //	}
 //}
-
-
-
 
 //interface A {
 //	
@@ -380,8 +943,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //interface A {
 //	
 //	abstract void add();//it is optional to write abstract with methods in an interface...
@@ -395,7 +956,6 @@ public class Nicolas {
 //		A a = new A();//it is illegal to create object of an interface.... 
 //	}
 //}
-
 
 //
 //abstract class A {
@@ -433,7 +993,6 @@ public class Nicolas {
 //	}
 //}
 
-
 //abstract class A {
 //	
 //	void add() {
@@ -470,8 +1029,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //
 //abstract class A {
 //	
@@ -501,7 +1058,6 @@ public class Nicolas {
 //	}
 //}
 
-
 //abstract class A {//it is legal to have all the methods implemeneted in an abstract class...
 //	
 //	void add() {
@@ -525,7 +1081,6 @@ public class Nicolas {
 //		A a = new A();//you can not create object of abstract class...
 //	}
 //}
-
 
 //
 //abstract class A {//it is legal to have abstract method in a class which is itself abstract...
@@ -551,7 +1106,6 @@ public class Nicolas {
 //	}
 //}
 
-
 //class LivingBeing {
 //	
 //	final void print() {
@@ -575,8 +1129,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //final class LivingBeing {
 //	
 //	
@@ -598,7 +1150,6 @@ public class Nicolas {
 //	}
 //}
 
-
 //class LivingBeing {
 //	
 //	//final int i;//this is illegal keeping final variable unassigned...
@@ -614,7 +1165,6 @@ public class Nicolas {
 //		being.i = 10;//you cannot reassign value to final variable...
 //	}
 //}
-
 
 //
 //class LivingBeing {
@@ -650,8 +1200,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //class LivingBeing {
 //
 //	int j = 4;
@@ -684,7 +1232,6 @@ public class Nicolas {
 //	}
 //}
 
-
 //class LivingBeing {
 //
 //	int i = 4;
@@ -708,8 +1255,6 @@ public class Nicolas {
 //			System.out.println(bird.i);
 //	}
 //}
-
-
 
 //class LivingBeing {
 //
@@ -754,8 +1299,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //class LivingBeing {
 //
 //	void eat() {
@@ -786,7 +1329,6 @@ public class Nicolas {
 //		
 //	}
 //}
-
 
 //class Mathe {
 //	
@@ -856,7 +1398,6 @@ public class Nicolas {
 //	}
 //}
 
-
 //
 //class LivingBeing {
 //
@@ -885,8 +1426,6 @@ public class Nicolas {
 //	}
 //}
 
-
-
 //class LivingBeing {
 //
 //	void eat() {
@@ -914,7 +1453,6 @@ public class Nicolas {
 //		being.eat();    being.fly();
 //	}
 //}
-
 
 //class LivingBeing {
 //

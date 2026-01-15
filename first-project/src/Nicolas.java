@@ -1,27 +1,156 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.Scanner;
 
-public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+import javax.net.ssl.ExtendedSSLSession;
 
-	public static void main(String args[]) throws Exception {
-		
-		
-			Nicolas nicolas = new Nicolas();
-			nicolas.a();
-		
-	}
+class LessThan18Exception extends Exception {
 	
-	void a() throws Exception{
-			b();
-		
-	}
-	
-	void b() throws Exception {
-		
-			File file = new File("a.txt");
-			FileReader reader = new FileReader(file);
+	LessThan18Exception(String message) {
+		super(message);
 	}
 }
+
+
+public class Nicolas {
+
+	public static void main(String args[]) {
+		
+		try {
+			eligibility();
+		}
+		catch (Exception e) {
+			
+		}	
+	}
+	
+	static void eligibility() throws LessThan18Exception {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Age!!");
+		int age = sc.nextInt();
+		
+			if(age < 18) {
+				throw new LessThan18Exception("We do not allow guests age less than 18!!");
+			}
+			else {
+				System.out.println("Welcome!!");
+			}
+	}
+}
+
+
+
+
+//class LessThan18Exception extends Exception {
+//	
+//	LessThan18Exception(String message) {
+//		super(message);
+//	}
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		
+//		
+//	}
+//	
+//	void eligibility() {
+//		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter your Age!!");
+//		int age = sc.nextInt();
+//		
+//		try {
+//			if(age < 18) {
+//				throw new LessThan18Exception("We do not allow guests age less than 18!!");
+//			}
+//			else {
+//				System.out.println("Welcome!!");
+//			}
+//		}
+//		catch (Exception e) {
+//			
+//		}
+//	}
+//}
+
+
+
+//class LessThan18Exception extends RuntimeException {
+//	
+//	LessThan18Exception(String message) {
+//		super(message);
+//	}
+//}
+//
+//
+//public class Nicolas {
+//
+//	public static void main(String args[]) {
+//		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter your Age!!");
+//		int age = sc.nextInt();
+//		
+//		if(age < 18) {
+//			throw new LessThan18Exception("We do not allow guests age less than 18!!");
+//		}
+//		else {
+//			System.out.println("Welcome!!");
+//		}
+//		
+//	}
+//}
+
+
+
+//public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+//
+//	public static void main(String args[]) {
+//		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter your Age!!");
+//		int age = sc.nextInt();
+//		
+//		if(age < 18) {
+//			throw new ArithmeticException();
+//		}
+//		else {
+//			System.out.println("Welcome!!");
+//		}
+//		
+//	}
+//}
+
+
+
+
+//public class Nicolas {//This code needs to be enclosed by try and catch or throws keyword...
+//
+//	public static void main(String args[]) throws Exception {
+//		
+//		
+//			Nicolas nicolas = new Nicolas();
+//			nicolas.a();
+//		
+//	}
+//	
+//	void a() throws Exception{
+//			b();
+//		
+//	}
+//	
+//	void b() throws Exception {
+//		
+//			File file = new File("a.txt");
+//			FileReader reader = new FileReader(file);
+//	}
+//}
 
 
 

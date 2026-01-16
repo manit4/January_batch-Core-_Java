@@ -1,83 +1,28 @@
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Collectionss {
 
 	public static void main(String[] args) {
 
-		Integer i1 = 12;
-		Integer i2 = 12;
-		
-		System.out.println(i1 == i2);
-		
-		
-//		Integer i1 = new Integer(100);
-//		Integer i2 = 100;
-////		System.out.println(i);
-////		System.out.println(i2);
-//		
-//		System.out.println(i1 == i2);
-//		System.out.println(i1.equals(i2));
-//		
-////		String num1 = "1000";
-////		String num2 = "200";
-////		
-////		int parsedNum1 = Integer.parseInt(num1);
-////		int parsedNum2 = Integer.parseInt(num2);
-////		
-////		System.out.println(parsedNum1+parsedNum2);
+		ConcurrentHashMap<Integer, String> users = new ConcurrentHashMap<>();
+		users.put(1, "Obaro");
+		users.put(2, "Lin");
+		users.put(3, "Giovonni");
+
+		for (Map.Entry<Integer, String> entry : users.entrySet()) {
+
+			if (entry.getKey().equals(1)) {
+				users.remove(1);
+			}
+		}
+		for (Map.Entry<Integer, String> entry : users.entrySet()) {
+
+			System.out.println(entry.getKey()+", "+entry.getValue());
+		}
 	}
 }
-
-
-//public class Collectionss {
-//
-//	public static void main(String[] args) {
-//
-//		Map<Integer, String> users = new HashMap<>();
-//		users.put(1, "Obaro");
-//		users.put(2, "Lin");
-//		users.put(3, "Giovonni");
-//		
-//		Map<Integer, String> syncMap = Collections.synchronizedMap(users);
-//
-//		for (Map.Entry<Integer, String> entry : syncMap.entrySet()) {
-//
-//			if (entry.getKey().equals(1)) {
-//				syncMap.remove(1);
-//			}
-//		}
-////		for (Map.Entry<Integer, String> entry : syncMap.entrySet()) {
-////
-////			System.out.println(entry.getKey()+", "+entry.getValue());
-////		}
-//	}
-//}
-
-
-
-//public class Collectionss {
-//
-//	public static void main(String[] args) {
-//
-//		ConcurrentHashMap<Integer, String> users = new ConcurrentHashMap<>();
-//		users.put(1, "Obaro");
-//		users.put(2, "Lin");
-//		users.put(3, "Giovonni");
-//
-//		for (Map.Entry<Integer, String> entry : users.entrySet()) {
-//
-//			if (entry.getKey().equals(1)) {
-//				users.remove(1);
-//			}
-//		}
-//		for (Map.Entry<Integer, String> entry : users.entrySet()) {
-//
-//			System.out.println(entry.getKey()+", "+entry.getValue());
-//		}
-//	}
-//}
 
 //class A implements Comparable<A>{
 //	

@@ -6,27 +6,21 @@ public class Collectionss {
 
 	public static void main(String[] args) {
 
-		Integer i1 = 12;
-		Integer i2 = 12;
+		Integer i1 = new Integer(100);
+		Integer i2 = 100;
+		System.out.println(i);
+		System.out.println(i2);
 		
 		System.out.println(i1 == i2);
+		System.out.println(i1.equals(i2));
 		
-		
-//		Integer i1 = new Integer(100);
-//		Integer i2 = 100;
-////		System.out.println(i);
-////		System.out.println(i2);
+//		String num1 = "1000";
+//		String num2 = "200";
 //		
-//		System.out.println(i1 == i2);
-//		System.out.println(i1.equals(i2));
+//		int parsedNum1 = Integer.parseInt(num1);
+//		int parsedNum2 = Integer.parseInt(num2);
 //		
-////		String num1 = "1000";
-////		String num2 = "200";
-////		
-////		int parsedNum1 = Integer.parseInt(num1);
-////		int parsedNum2 = Integer.parseInt(num2);
-////		
-////		System.out.println(parsedNum1+parsedNum2);
+//		System.out.println(parsedNum1+parsedNum2);
 	}
 }
 

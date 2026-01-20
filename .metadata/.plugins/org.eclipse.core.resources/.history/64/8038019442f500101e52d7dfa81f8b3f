@@ -1,0 +1,23 @@
+
+class A extends Thread {
+	
+	public void run() {
+		for(int i = 0; i < 20; i++) {
+			System.out.println(Thread.currentThread().getName());
+		}
+	}
+}
+
+public class MultiThread {
+
+	public static void main(String[] args) {
+		
+		A thread1 = new A();
+		A thread2 = new A();
+		thread1.setName("Aeron");
+		thread2.setName("Lin");
+		thread1.start();
+		thread2.start();
+		
+	}
+}

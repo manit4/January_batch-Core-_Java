@@ -1,0 +1,187 @@
+
+class A implements Runnable {
+	
+	int total = 0;
+	
+	public void run() {
+
+		for(int i = 0; i < 20; i++) {
+			
+			total = total + i;
+		}
+	}
+}
+
+public class MultiThread {
+
+	public static void main(String[] args) {
+		
+		System.out.println(Thread.currentThread().getName());
+		
+		A runnable = new A();
+		Thread thread =  new Thread(runnable);
+		thread.setName("Aeron");
+		thread.start();
+		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("The total is "+runnable.total);
+	}
+}
+
+
+
+//class A implements Runnable {
+//	
+//	int account = 10;
+//	
+//	synchronized public void run() {
+//		
+//		System.out.println("Amout is "+account+" checked by "+Thread.currentThread().getName());
+//		
+//		if(account >= 10) {
+//			
+//			for(int i = 0; i < 50; i++) {
+//				System.out.println("Time wasting by "+Thread.currentThread().getName()+" "+i);
+//			}
+//			account = account - 10;
+//		}
+//		else {
+//			System.out.println("Not enough money");
+//		}
+//		
+//		System.out.println("Transaction done "+account);
+//	}
+//}
+//
+//public class MultiThread {
+//
+//	public static void main(String[] args) {
+//		
+//		System.out.println(Thread.currentThread().getName());
+//		
+//		A runnable = new A();
+//		Thread thread =  new Thread(runnable);
+//		Thread thread2 =  new Thread(runnable);
+//		thread.setName("Aeron");
+//		thread.start();
+//		thread2.start();
+//	}
+//}
+
+
+
+
+//class A implements Runnable {
+//	
+//	public void run() {
+//		
+//		int total = 0;
+//		
+//		for(int i = 0; i < 20; i++) {
+//			total = total + i;
+//			System.out.println(Thread.currentThread().getName());
+//		}
+//		System.out.println(total);
+//	}
+//}
+//
+//public class MultiThread {
+//
+//	public static void main(String[] args) {
+//		
+//		System.out.println(Thread.currentThread().getName());
+//		
+//		A runnable = new A();
+//		Thread thread =  new Thread(runnable);
+//		Thread thread2 =  new Thread(runnable);
+//		thread.setName("Aeron");
+//		thread.start();
+//		thread2.start();
+//	}
+//}
+
+
+
+
+//class A implements Runnable {
+//	
+//	public void run() {
+//		
+//		try {
+//			Thread.sleep(5000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println("hiiiiiiii");
+//	}
+//}
+//
+//public class MultiThread {
+//
+//	public static void main(String[] args) {
+//		
+//		System.out.println(Thread.currentThread().getName());
+//		
+//		A runnable = new A();
+//		Thread thread =  new Thread(runnable);
+//		Thread thread2 =  new Thread(runnable);
+//		thread.setName("Aeron");
+//		thread.start();
+//		thread2.start();
+//	}
+//}
+
+
+
+//class A implements Runnable {
+//	
+//	public void run() {
+//		for(int i = 0; i < 20; i++) {
+//			System.out.println(Thread.currentThread().getName());
+//		}
+//	}
+//}
+//
+//public class MultiThread {
+//
+//	public static void main(String[] args) {
+//		
+//		System.out.println(Thread.currentThread().getName());
+//		
+//		A runnable = new A();
+//		Thread thread =  new Thread(runnable);
+//		Thread thread2 =  new Thread(runnable);
+//		thread.setName("Aeron");
+//		thread.start();
+//		thread2.start();
+//	}
+//}
+
+
+
+//class A extends Thread {
+//	
+//	public void run() {
+//		for(int i = 0; i < 20; i++) {
+//			System.out.println(Thread.currentThread().getName());
+//		}
+//	}
+//}
+//
+//public class MultiThread {
+//
+//	public static void main(String[] args) {
+//		
+//		A thread1 = new A();//This is normal object but is not thread...
+//		A thread2 = new A();
+//		thread1.setName("Aeron");
+//		thread2.setName("Lin");
+//		thread1.start();//start() will make the  normal class object acting as a thread
+//						//and put it into runnable pool making it eligible for running...
+//		thread2.start();
+//	}
+//}

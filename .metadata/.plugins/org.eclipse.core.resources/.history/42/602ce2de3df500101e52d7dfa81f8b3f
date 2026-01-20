@@ -1,0 +1,15 @@
+
+class A {
+	
+	public void run() {
+		System.out.println("Hiii...");
+	}
+}
+
+public class MultiThread {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}

@@ -1,0 +1,56 @@
+
+interface A {
+	
+	void add();
+	void sub();
+	default void mul() {
+		System.out.println("inside mul()");
+	}
+	static void divide() {
+		System.out.println("inside divide");
+	}
+}
+
+class B implements A {
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sub() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+class C implements A {
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sub() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	void mul() {
+		System.out.println("insdie C mul()...");
+	}
+	
+}
+
+public class Java8 {
+	
+	public static void main(String[] args) {
+	
+		
+	}
+}

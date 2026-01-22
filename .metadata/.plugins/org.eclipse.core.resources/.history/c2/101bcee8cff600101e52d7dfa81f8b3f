@@ -1,0 +1,35 @@
+
+class Human {
+	
+	int height = 1;
+	int mascularStrength = 10;
+	
+	public void playBasketball() {
+		height++;
+	}
+	
+	public void gyming() {
+		mascularStrength++;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public void greet() {
+		System.out.println("hello!!");
+	}
+}
+
+
+public class Java8 {
+	
+	public static void main(String[] args) {
+	
+		Human manit = new Human();
+		manit.playBasketball();
+		manit.gyming();
+		
+		Human lin = new Human();
+		manit.gyming();
+		
+	}
+}

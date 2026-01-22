@@ -1,0 +1,344 @@
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+class Employee {
+
+	String name;
+	int workX;
+	int salary;
+
+	public Employee(String name, int workX, int salary) {
+		this.name = name;
+		this.workX = workX;
+		this.salary = salary;
+	}
+}
+
+public class Java8 {
+
+	public static void main(String[] args) {
+
+		Consumer<Employee> consumer = obj -> {
+			
+			if(obj.workX > 5) {
+				System.out.println("Congratulations, you are eligible for bonus "+obj.salary* 2);
+			}
+			else {
+				System.out.println("Sorry, not eligible for salary!!");
+			}
+		};
+
+		Employee employee = new Employee("Aeron", 4, 10000);
+
+		consumer.accept(employee);
+	}
+}
+
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//		
+//		Consumer<String> consumer = name -> System.out.println("the length of the name is "
+//				+name.length()+" and the converted name is "+name.toUpperCase());
+//		
+//		consumer.accept("Aeron");
+//	
+//	}
+//}
+
+//class Employee {
+//	
+//	String name;
+//	int workX;
+//	int salary;
+//	
+//	public Employee(String name, int workX, int salary) {
+//		this.name = name;
+//		this.workX = workX;
+//		this.salary = salary;
+//	}
+//}
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//		
+//		Predicate<Employee> predicate = emp -> emp.workX > 5;
+//	
+//		Employee employee = new Employee("Aeron", 7, 10000);
+//		
+//		System.out.println(predicate.test(employee));
+//	}
+//}
+
+//class Employee {
+//	
+//	String name;
+//	int workX;
+//	int salary;
+//	
+//	public Employee(String name, int workX, int salary) {
+//		this.name = name;
+//		this.workX = workX;
+//		this.salary = salary;
+//	}
+//}
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//		
+//		Predicate<Employee> predicate = emp -> emp.workX > 5;
+//	
+//		Employee employee = new Employee("Aeron", 7, 10000);
+//		
+//		System.out.println(predicate.test(employee));
+//		
+//		
+//		
+////		Predicate<String> predicate = name -> name.length() > 5;
+////		System.out.println(predicate.test("Obarooo"));
+//		
+//		
+//		
+////		Predicate<Integer> predicate = num -> num > 10;
+////		
+////		boolean status = predicate.test(100);
+////		System.out.println(status);
+//		
+//		
+////		Predicate<Integer> predicate = num -> { 
+////			return num > 10;
+////		};
+////		
+////		predicate.test(1);
+//		
+//		
+////		Predicate<Integer> predicate = num -> {
+////			if(num > 10) {
+////				return true;
+////			}
+////			else {
+////				return false;
+////			}
+////		};
+//		
+////		boolean status = predicate.test(100);
+////		System.out.println(status);
+//	}
+//}
+
+//
+//interface Cab {
+//	
+//	int book(String source, String destination);
+//}
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		Cab cab = (source, destination) ->  {
+//			
+//			System.out.println("Your Cab is booked from "+source+" to "+destination);
+//			return 200;
+//		}; 
+//		int fare = cab.book("Newyork City", "New Jersey");
+//		
+//		System.out.println("The fare is "+fare);
+//	}
+//}
+
+//interface Cab {
+//	
+//	int book(String source, String destination);
+//}
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		Cab cab = (source, destination) ->  {
+//			
+//			System.out.println("Your Cab is booked from "+source+" to "+destination);
+//			return 200;
+//		}; 
+//		int fare = cab.book("Newyork City", "New Jersey");
+//		
+//		System.out.println("The fare is "+fare);
+//	}
+//}
+
+//interface Cab {
+//	
+//	int book(String source, String destination);
+//}
+//
+//class Uber implements Cab {
+//
+//	@Override
+//	public int book(String source, String destination) {
+//		
+//		System.out.println("Your Cab is booked from "+source+" to "+destination);
+//		
+//		return 200;
+//	}
+//	
+//	
+//}
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		Cab cab = new Uber(); 
+//		int fare = cab.book("Newyork City", "New Jersey");
+//		
+//		System.out.println("The fare is "+fare);
+//	}
+//}
+
+//interface Cab {
+//	
+//	void book(String source, String destination);
+//}
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		Cab cab = (source, destination) -> System.out.println("Your Cab is booked from "+source+" to "+destination);
+//		cab.book("Newyork City", "New Jersey");
+//	}
+//}
+
+//
+//interface Cab {
+//	
+//	void book(String source, String destination);
+//}
+//
+//class Uber implements Cab {
+//
+//	@Override
+//	public void book(String source, String destination) {
+//		
+//		System.out.println("Your Cab is booked from "+source+" to "+destination);
+//		
+//	}	
+//}
+//
+//(String source, String destination) -> System.out.println("Your Cab is booked from "+source+" to "+destination);
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		Cab cab = new Uber();
+//		cab.book("Newyork City", "New Jersey");
+//	}
+//}
+
+//interface Cab {
+//	
+//	void book();
+//}
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		Cab cab = () -> System.out.println("Your Cab is booked!!");
+//		cab.book();
+//	}
+//}
+
+//interface Cab {
+//	
+//	void book();
+//}
+//
+//class Uber implements Cab {
+//
+//	@Override
+//	public void book() {
+//		
+//		System.out.println("Your Cab is booked!!");
+//	}
+//}
+//
+//
+//
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		Cab cab = new Uber();
+//		cab.book();
+//		
+//	}
+//}
+
+//@FunctionalInterface//This annotation is optional and is used to convey info to fellow developers not to add any other abstract method since this is functional interface...
+//interface ABC {
+//	
+//	void add();
+//	void sub();
+//	
+//}
+//
+//
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		
+//	}
+//}
+
+//interface ABC {//this is functional interface since it has 1 functional interface
+//				//it does not matter wheteher you have static method/default method or not...
+//	
+//	void add();
+//	default void mul() {
+//		System.out.println("inside mul()");
+//	}
+//	static void divide() {
+//		System.out.println("inside divide");
+//	}
+//}
+//
+//
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		
+//	}
+//}
+
+//
+//interface ABC {//This is not functional interface since it has 2 abstract methods...
+//	
+//	void add();
+//	void sub();
+//	default void mul() {
+//		System.out.println("inside mul()");
+//	}
+//	static void divide() {
+//		System.out.println("inside divide");
+//	}
+//}
+//
+//
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		
+//	}
+//}

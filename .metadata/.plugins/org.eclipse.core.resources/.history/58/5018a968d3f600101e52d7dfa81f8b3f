@@ -1,0 +1,66 @@
+
+@FunctionalInterface//This annotation is used to convey info to fellow developers not to add
+					//any other abstract method since this is functional interface...
+interface ABC {
+	
+	void add();
+	void sub();
+	
+}
+
+
+
+public class Java8 {
+	
+	public static void main(String[] args) {
+	
+		
+	}
+}
+
+
+//interface ABC {//this is functional interface since it has 1 functional interface
+//				//it does not matter wheteher you have static method/default method or not...
+//	
+//	void add();
+//	default void mul() {
+//		System.out.println("inside mul()");
+//	}
+//	static void divide() {
+//		System.out.println("inside divide");
+//	}
+//}
+//
+//
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		
+//	}
+//}
+
+
+//
+//interface ABC {//This is not functional interface since it has 2 abstract methods...
+//	
+//	void add();
+//	void sub();
+//	default void mul() {
+//		System.out.println("inside mul()");
+//	}
+//	static void divide() {
+//		System.out.println("inside divide");
+//	}
+//}
+//
+//
+//
+//public class Java8 {
+//	
+//	public static void main(String[] args) {
+//	
+//		
+//	}
+//}

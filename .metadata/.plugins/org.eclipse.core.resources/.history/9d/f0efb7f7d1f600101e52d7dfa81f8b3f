@@ -1,0 +1,58 @@
+
+interface ABC {
+	
+	void add();
+	void sub();
+	default void mul() {
+		System.out.println("inside mul()");
+	}
+	static void divide() {
+		System.out.println("inside divide");
+	}
+}
+
+class B implements ABC {
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sub() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+class C implements ABC {
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sub() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void mul() {
+		System.out.println("insdie C mul()...");
+	}
+	void divide() {
+		System.out.println("insdie divide()...");
+	}
+}
+
+public class Java8 {
+	
+	public static void main(String[] args) {
+	
+		
+	}
+}

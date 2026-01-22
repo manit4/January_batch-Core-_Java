@@ -20,21 +20,12 @@ public class Java8 {
 
 	public static void main(String[] args) {
 		
-		List<String> list = Arrays.asList("32", "54", "32", "76");
+			List<String> list = Arrays.asList("32", "54", "12", "76");
 		
 		
-		list.stream().distinct().forEach(System.out::println);;
+		Optional<String> optional = list.stream().reduce((value, acummulatedData) -> acummulatedData + value);
 		
-		
-		
-		
-		
-//		List<String> list = Arrays.asList("32", "54", "12", "76");
-//		
-//		
-//		Optional<String> optional = list.stream().reduce((value, acummulatedData) -> acummulatedData + value);
-//		
-//		System.out.println(optional.get());
+		System.out.println(optional.get());
 		
 		
 		

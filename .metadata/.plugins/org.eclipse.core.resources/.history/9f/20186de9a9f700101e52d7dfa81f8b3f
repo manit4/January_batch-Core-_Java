@@ -23,7 +23,7 @@ public class Java8 {
 		List<String> list = Arrays.asList("32", "54", "32", "76");
 		
 		
-		list.stream().distinct().forEach(System.out::println);;
+		list.stream().distinct().forEach(System.out::println);
 		
 		
 		

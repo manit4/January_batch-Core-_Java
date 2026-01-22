@@ -1,214 +1,42 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-
-class Employee {
-
-	String name;
-	int workX;
-	int salary;
-
-	public Employee(String name, int workX, int salary) {
-		this.name = name;
-		this.workX = workX;
-		this.salary = salary;
-	}
-}
-
+import java.util.Comparator;
 
 public class Java8 {
 
 	public static void main(String[] args) {
 		
-		List<String> list = Arrays.asList("32", "54", "32", "76");
-		
-		
-		list.stream().distinct().forEach(System.out::println);;
-		
-		
-		
-		
-		
-//		List<String> list = Arrays.asList("32", "54", "12", "76");
-//		
-//		
-//		Optional<String> optional = list.stream().reduce((value, acummulatedData) -> acummulatedData + value);
-//		
-//		System.out.println(optional.get());
-		
-		
-		
-//		List<Integer> list = Arrays.asList(32, 54, 12, 76);
-//		
-//		
-//		Optional<Integer> optional = list.stream().reduce((value, acummulatedData) -> acummulatedData + value);
-//		
-//		System.out.println(optional.get());
-		
-		
-//		List<Integer> list = Arrays.asList(32, 54, 12, 76);
-//		long count = list.stream().filter(num -> num >35).count();
-//		
-//		
-//		
-//		//long count = list.stream().count();
-//		
-//		
-//		System.out.println(count);
-		
-		
-		
-//		Employee employee1 = new Employee("Lin", 12, 12000);
-//		Employee employee2 = new Employee("Aeron", 4, 5000);
-//		Employee employee3 = new Employee("Giovonny", 7, 10000);
-//
-//		List<Employee> list = Arrays.asList(employee1, employee2, employee3);
-//
-//		list.forEach(obj -> System.out.println(obj.salary+" and the name is "+obj.name));
-//	
-		
-		
-		
-		
-//		List<Integer> list = Arrays.asList(32, 54, 12, 76);
-//		
-//		list.stream().forEach(num -> System.out.println(num));
-//		
-//		list.forEach(num -> System.out.println(num));
-		
-		
-		
-		
-//		Employee employee1 = new Employee("Lin", 12, 12000);
-//		Employee employee2 = new Employee("Aeron", 4, 5000);
-//		Employee employee3 = new Employee("Giovonny", 7, 10000);
-//
-//		List<Employee> list = Arrays.asList(employee1, employee2, employee3);
-//
-//		list.stream()
-//				.filter(obj -> obj.workX > 5)
-//					.map(obj -> obj.salary * 2)
-//						.collect(Collectors.toList()).stream()
-//							.filter(num -> num <= 20000)
-//								.forEach(num -> System.out.println(num));
-		
-		
-					
-		
-		
-		
-		
-//		Employee employee1 = new Employee("Lin", 12, 12000);
-//		Employee employee2 = new Employee("Aeron", 4, 5000);
-//		Employee employee3 = new Employee("Giovonny", 7, 10000);
-//
-//		List<Employee> list = Arrays.asList(employee1, employee2, employee3);
-//
-//		list.stream()
-//				.filter(obj -> obj.workX > 5)
-//					.forEach(obj -> System.out.println(obj.name+" Your Bonus is "+obj.salary * 2));
-//				
-				
-		
-		
-//		List<Integer> list = Arrays.asList(23, 54, 2, 67);
-//
-//		list.stream()
-//				.filter(num -> num % 2 == 0)
-//					.forEach(num -> System.out.println(num));
-
-		
-
-		
-		
-		
-		
-//		List<Integer> list = Arrays.asList(23, 54, 2, 67);
-//		
-//		List<Integer> evenNos = list.stream()
-//				.filter( num -> num % 2 == 0 )
-//					.collect(Collectors.toList());
-//		
-//		System.out.println("Original list is "+list);
-//		System.out.println("Even Nos list is "+evenNos);
-
-//		List<Integer> evenNos = new ArrayList<>();
-//		
-//		for (Integer val : list) {
-//
-//			System.out.println(val + 100);
-//		}
-
-//		for (Integer val : list) {
-//
-//			if (val % 2 == 0) {
-//				evenNos.add(val);
-//			}
-//		}
-
-		// System.out.println(evenNos);
-
-//		for(Integer val : list) {
+//		Comparable<String> comparable = obj -> {
 //			
-//			if(val % 2 == 0) {
-//				System.out.println(val);
-//			}
-//		}
+//			if(obj.length() < 5)
+//				return -1;
+//			else if( obj.length() > 5)
+//				return 1;
+//			else
+//				return 0;
+//		};
+//		
+//		String name = "Lin";
+//		
+//		System.out.println(comparable.compareTo(name));
+		
+		
+		
+		Comparator<Integer> comparator = (val1, val2) -> {
+			
+			int status = 0;
+			
+			if( val1 < val2)
+				status = -1;
+			else if(val1 > val2)
+				status = 1;
+			return status;
+		};
+		
+		
+		
+		System.out.println(comparator.compare(32, 15));
 	}
 }
 
-//public class Java8 {
-//
-//	public static void main(String[] args) {
-//		
-//		String val1 = "Lin";
-//		String val2 = "Aeron";
-//		
-//		Comparator<String> comparator = (data1, data2) -> {
-//			
-//			return data1.compareTo(val2);
-//		};
-//		
-//	System.out.println(comparator.compare(val1, val2));	
-//	}
-//}
-
-////public class Java8 {
-//
-//	public static void main(String[] args) {
-//		
-////		Comparable<String> comparable = obj -> {
-////			
-////			if(obj.length() < 5)
-////				return -1;
-////			else if( obj.length() > 5)
-////				return 1;
-////			else
-////				return 0;
-////		};
-////		
-////		String name = "Lin";
-////		
-////		System.out.println(comparable.compareTo(name));
-//		
-//		
-//		
-//		Comparator<Integer> comparator = (val1, val2) -> {
-//			
-//			int status = 0;
-//			
-//			if( val1 < val2)
-//				status = -1;
-//			else if(val1 > val2)
-//				status = 1;
-//			return status;
-//		};
-//		
-//		
-//		
-//		System.out.println(comparator.compare(32, 15));
-//	}
-//}
 
 //public class Java8 {
 //
@@ -223,6 +51,7 @@ public class Java8 {
 //		
 //	}
 //}
+
 
 //class Employee {
 //
@@ -254,40 +83,6 @@ public class Java8 {
 //	}
 //}
 
-//class Employee {
-//
-//	String name;
-//	int workX;
-//	int salary;
-//
-//	public Employee(String name, int workX, int salary) {
-//		this.name = name;
-//		this.workX = workX;
-//		this.salary = salary;
-//	}
-//}
-//
-//public class Java8 {
-//
-//	public static void main(String[] args) {
-//		
-//		Employee employee = new Employee("Lin", 3, 12000);
-//
-//		Supplier<Integer> supplier = () -> {
-//			
-//			if(employee.workX > 5) {
-//				return employee.salary * 2;
-//			}
-//			else {
-//				return null;
-//			}
-//		};
-//		
-//		System.out.println("The Bonus is "+supplier.get());
-//
-//		
-//	}
-//}
 
 //class Employee {
 //
@@ -323,6 +118,43 @@ public class Java8 {
 //		
 //	}
 //}
+
+
+//class Employee {
+//
+//	String name;
+//	int workX;
+//	int salary;
+//
+//	public Employee(String name, int workX, int salary) {
+//		this.name = name;
+//		this.workX = workX;
+//		this.salary = salary;
+//	}
+//}
+//
+//public class Java8 {
+//
+//	public static void main(String[] args) {
+//		
+//		Employee employee = new Employee("Lin", 3, 12000);
+//
+//		Supplier<Integer> supplier = () -> {
+//			
+//			if(employee.workX > 5) {
+//				return employee.salary * 2;
+//			}
+//			else {
+//				return null;
+//			}
+//		};
+//		
+//		System.out.println("The Bonus is "+supplier.get());
+//
+//		
+//	}
+//}
+
 
 //public class Java8 {
 //
@@ -342,6 +174,7 @@ public class Java8 {
 //		
 //	}
 //}
+
 
 //class Employee {
 //
